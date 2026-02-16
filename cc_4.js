@@ -66,13 +66,14 @@ for(let i = 0; i < 2; i++) {
     totalcost += finalPrice;
 
     products.inventoryCount -= 1;
+ }
 }
-}
-console.log(`Total Cost: $${totalcost.toFixed(2)}`);
+
+console.log(`Total Cost: $${totalCost.toFixed(2)}`);
 console.log("---\n");
 
 
-console.log("=== PRODUCT DETAILS (for...in loop)===\n");
+console.log("=== PRODUCT DETAILS (for...in loop) ===\n");
 const sampleProduct = products[0];
 console.log(`Product: ${sampleProduct.name}`);
 
@@ -83,8 +84,8 @@ for (const key in sampleProduct) {
 console.log("\n=== ALL PRODUCTS AFTER UPDATES (object.entries & destructuring) ===\n");
 
 for (const p of products) {
-    const entries = Object.entries(product);
-    console.log(`${product.name}:`);
+    const entries = Object.entries(products);
+    console.log(`${products.name}:`);
     for (const [key, value] of entries) {
         if (typeof value === "number") {
             console.log(` ${key}: ${value.toFixed(2)}`);
